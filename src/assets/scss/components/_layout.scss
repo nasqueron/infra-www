@@ -1,0 +1,25 @@
+body {
+  margin-top: 3em;
+}
+
+h1 img {
+  margin-right: 0.5em;
+}
+
+header {
+  margin-bottom: 1.5em;
+}
+
+.primary {
+  a {
+    color: #16353a;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $white;
+  }
+}
+
+.label {
+  margin-right: 0.25em;
+}
