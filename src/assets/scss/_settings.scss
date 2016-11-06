@@ -39,6 +39,7 @@
 //  34. Title Bar
 //  35. Tooltip
 //  36. Top Bar
+//  37. Code
 
 @import 'util/util';
 
@@ -105,7 +106,7 @@ $block-grid-max: 8;
 $header-font-family: 'Dosis', $body-font-family;
 $header-font-weight: 200;
 $header-font-style: normal;
-$font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
+$font-family-monospace: 'Roboto Mono', Consolas, 'Liberation Mono', Courier, monospace;
 $header-sizes: (
   small: (
     'h1': 24,
@@ -133,12 +134,6 @@ $header-small-font-color: $medium-gray;
 $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;
-$code-color: $black;
-$code-font-family: $font-family-monospace;
-$code-font-weight: $global-weight-normal;
-$code-background: $light-gray;
-$code-border: 1px solid $medium-gray;
-$code-padding: rem-calc(2 5 1);
 $anchor-color: $secondary-color;
 $anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
 $anchor-text-decoration: none;
@@ -564,3 +559,14 @@ $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 1rem;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
+
+// 37. Code
+// --------
+
+$code-color: $white;
+$code-font-family: $font-family-monospace;
+$code-font-weight: 400;
+$code-background: scale-color($body-background, $lightness: $callout-background-fade);
+$code-border-scale: 15%;
+$code-border: 1px solid darken($code-background, $code-border-scale);
+$code-padding: rem-calc(2 5 1);

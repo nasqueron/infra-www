@@ -10,6 +10,10 @@ header {
   margin-bottom: 1.5em;
 }
 
+code {
+  font-size: 0.9em;
+}
+
 .primary {
   a {
     color: #16353a;
@@ -17,6 +21,18 @@ header {
 
   h1, h2, h3, h4, h5, h6 {
     color: $white;
+  }
+
+  code {
+    color: $black;
+    background-color: $white;
+    border: 1px solid $light-gray;
+  }
+}
+
+.secondary {
+  h1, h2, h3, h4, h5, h6 {
+    color: $black;
   }
 }
 
