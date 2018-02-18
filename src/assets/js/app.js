@@ -236,7 +236,16 @@ var ServersLog = function (url, container) {
          */
         hexadecimalKnownWord: [
             "added",
+            "accede",
+            "adead",
+            "decade",
+            "deedeed",
+            "deface",
             "ed25519",
+            "efface",
+            "facade",
+            "faced",
+            "faded",
         ],
 
         /**
