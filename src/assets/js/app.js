@@ -172,7 +172,7 @@ var ServersLog = function (url, container) {
          */
         formatMonthHeadings: function (timestamp) {
             var date = new Date(timestamp);
-            var month = this.monthNames[date.getMonth()];
+            var month = this.monthNames[date.getUTCMonth()];
 
             return "<h2>" + month + "</h2>";
         },
