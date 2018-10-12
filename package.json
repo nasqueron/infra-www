@@ -1,14 +1,14 @@
 {
-  "name": "foundation-zurb-template",
-  "version": "1.0.0",
-  "description": "Official ZURB Template for Foundation for Sites.",
+  "name": "nasqueron-infra-www",
+  "version": "0.1.0",
+  "description": "Nasqueron Infrastructure documents our infrastructure servers and operations.",
   "main": "gulpfile.babel.js",
   "scripts": {
     "start": "gulp",
     "build": "gulp build --production"
   },
-  "author": "ZURB <foundation@zurb.com>",
-  "license": "MIT",
+  "author": "Sébastien Santoro <dereckson@espace-win.org>",
+  "license": "BSD-2-Clause",
   "dependencies": {
     "foundation-sites": "~6.4.1",
     "jquery": ">=3.0.0",
@@ -46,11 +46,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zurb/foundation-zurb-template.git"
+    "url": "https://devcentral.nasqueron.org/source/infra-www.git"
   },
   "bugs": {
-    "url": "https://github.com/zurb/foundation-sites/issues",
-    "email": "foundation@zurb.com"
+    "url": "https://devcentral.nasqueron.org/"
   },
   "babel": {
     "presets": [

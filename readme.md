@@ -1,10 +1,26 @@
-# ZURB Template
+# Nasqueron infrastructure servers website
 
-[![devDependency Status](https://david-dm.org/zurb/foundation-zurb-template/dev-status.svg)](https://david-dm.org/zurb/foundation-zurb-template#info=devDependencies)
+## Goal
 
-**Please open all issues with this template on the main [Foundation for Sites](https://github.com/zurb/foundation-sites/issues) repo.**
+The Nasqueron Infrastructure web site documents our infrastructure servers
+and operations.
 
-This is the official ZURB Template for use with [Foundation for Sites](http://foundation.zurb.com/sites). We use this template at ZURB to deliver static code to our clients. It has a Gulp-powered build system with these features:
+## Content
+
+This site is a front-end for the different microservices
+documenting our infrastructure.
+
+It so offer static HTML/JS/CSS pages to query the microservices API.
+
+Currently, it gives access to:
+
+- Servers log: actions done by Nasqueron Operations SIG members on the infra
+
+## Based on ZURB Template
+
+This work is based on the ZURB Template to create static sites with Foundation.
+
+It offers the following features:
 
 - Handlebars HTML templates with Panini
 - Sass compilation and prefixing
@@ -17,54 +33,26 @@ This is the official ZURB Template for use with [Foundation for Sites](http://fo
 
 ## Installation
 
-To use this template, your computer needs:
+To install this site:
 
-- [NodeJS](https://nodejs.org/en/) (0.12 or greater)
-- [Git](https://git-scm.com/)
-
-This template can be installed with the Foundation CLI, or downloaded and set up manually.
-
-### Using the CLI
-
-Install the Foundation CLI with this command:
-
-```bash
-npm install foundation-cli --global
 ```
-
-Use this command to set up a blank Foundation for Sites project with this template:
-
-```bash
-foundation new --framework sites --template zurb
-```
-
-The CLI will prompt you to give your project a name. The template will be downloaded into a folder with this name.
-
-Now `cd` to your project name and to start your project run 
-
-```bash
-foundation watch
-```
-
-### Manual Setup
-
-To manually set up the template, first download it with Git:
-
-```bash
-git clone https://github.com/zurb/foundation-zurb-template projectname
+$ git clone https://devcentral.nasqueron.org/source/infra-www.git
 ```
 
 Then open the folder in your command line, and install the needed dependencies:
 
 ```bash
-cd projectname
+cd infra-www
 npm install
 ```
 
-Finally, run `npm start` to run Gulp. Your finished site will be created in a folder called `dist`, viewable at this URL:
+Finally, run `npm start` to run Gulp. Your finished site will be created in a
+folder called `dist`, viewable at this URL:
 
 ```
 http://localhost:8000
 ```
 
 To create compressed, production-ready assets, run `npm run build`.
+
+For Nasqueron, this is done by a Jenkins CD task.
