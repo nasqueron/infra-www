@@ -8,6 +8,11 @@
     Licence:        CC-BY 4.0, MIT, BSD-2-Clause (multi-licensing)
     -------------------------------------------------------------    */
 
+import $ from 'jquery';
+window.$ = $;
+
+import Foundation from 'foundation-sites';
+
 /*  -------------------------------------------------------------
     Table of contents
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

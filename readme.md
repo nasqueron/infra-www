@@ -43,16 +43,16 @@ Then open the folder in your command line, and install the needed dependencies:
 
 ```bash
 cd infra-www
-npm install
+yarn install
 ```
 
-Finally, run `npm start` to run Gulp. Your finished site will be created in a
+Finally, run `yarn start` to run Gulp. Your finished site will be created in a
 folder called `dist`, viewable at this URL:
 
 ```
 http://localhost:8000
 ```
 
-To create compressed, production-ready assets, run `npm run build`.
+To create compressed, production-ready assets, run `yarn run build`.
 
 For Nasqueron, this is done by a Jenkins CD task.
