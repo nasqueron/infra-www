@@ -1,0 +1,59 @@
+/*  -------------------------------------------------------------
+    Footer
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
+
+footer {
+  margin-bottom: 0;
+  margin-top: 10vh;
+  padding-top: 2em;
+
+  background-color: $primary-color;
+  color: white;
+
+  hr {
+    width: 75%;
+    height: 1px;
+    margin: 0em auto 1em auto;
+
+    border-color: darken($primary-color, 3%);
+  }
+
+  a {
+    color: darken($primary-color, 15%);
+  }
+
+  a:hover {
+    color: black;
+  }
+
+  a:active {
+    color: $white !important;
+  }
+
+  .site-description {
+    text-align: center;
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  dl {
+    font-variant: small-caps;
+  }
+
+  dt {
+    color: white;
+    font-weight: 600;
+  }
+
+  dd {
+    padding-left: 1em;
+  }
+
+  .extrainfos {
+    strong {
+      font-variant: small-caps;
+    }
+  }
+}
