@@ -15,5 +15,8 @@
     {{> body}}
     {{> footer}}
     <script src="{{root}}assets/js/app.js"></script>
+    {{#if app}}
+    <script src="{{root}}assets/js/{{app}}.js"></script>
+    {{/if}}
   </body>
 </html>
