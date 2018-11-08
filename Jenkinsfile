@@ -12,6 +12,7 @@ pipeline {
                 npm install
                 npm run build
                 cd dist
+                rm -rf _external
                 tar czf ../www-nasqueron-infra.tar.gz *
                 '''
             }
