@@ -3,6 +3,7 @@
     <p>The entries are the containers pushed to the private registry.</p>
     <p>They are fetched through our <a href="https://docs.nasqueron.org/docker-registry-api/">Docker registry API </a>.</p>
 </div>
+
 <div class="callout primary">
     <h3>Add a container</h3>
     <p>
@@ -10,8 +11,14 @@
         <br /><code>docker tag &lt;hash&gt; localhost:5000/image_name</code>
         <br /><code>docker push localhost:5000/image_name</code>
     </p>
+    <p>
+        On other servers (e.g. Dwellers):
+        <br /><code>docker tag &lt;hash&gt; registry.nasqueron.org/image_name</code>
+        <br /><code>docker push registry.nasqueron.org/image_name</code>
+    </p>
     <p>If you don't have an access, reach Dereckson on Freenode #nasqueron-ops.</p>
 </div>
+
 <div class="callout primary">
     <h3>License</h3>
     <p>Individual records are too short to be original, and so are in the public domain.</p>
