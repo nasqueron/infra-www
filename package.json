@@ -5,7 +5,9 @@
   "main": "gulpfile.babel.js",
   "scripts": {
     "start": "gulp",
-    "build": "gulp build --production"
+    "build": "gulp build --production",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Sébastien Santoro <dereckson@espace-win.org>",
   "license": "BSD-2-Clause",
@@ -13,7 +15,8 @@
     "foundation-sites": "~6.4.1",
     "jquery": ">=3.0.0",
     "what-input": "^4.1.3",
-    "motion-ui": "^2.0.3"
+    "motion-ui": "^2.0.3",
+    "snyk": "^1.161.1"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
@@ -29,7 +32,7 @@
     "gulp-concat": "^2.5.2",
     "gulp-extname": "^0.2.0",
     "gulp-if": "^2.0.0",
-    "gulp-imagemin": "^4.1.0",
+    "gulp-imagemin": "^5.0.0",
     "gulp-load-plugins": "^1.1.0",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.1",
@@ -52,5 +55,6 @@
   "bugs": {
     "url": "https://devcentral.nasqueron.org/"
   },
-  "private": true
+  "private": true,
+  "snyk": true
 }
