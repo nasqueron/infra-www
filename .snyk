@@ -1,0 +1,34 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-450202:
+    - '@babel/preset-env > @babel/plugin-transform-classes > @babel/helper-function-name > @babel/types > lodash':
+        patched: '2019-07-04T01:30:39.614Z'
+    - uncss > lodash:
+        patched: '2019-07-04T01:30:39.614Z'
+    - browser-sync > easy-extender > lodash:
+        patched: '2019-07-04T01:30:39.614Z'
+    - '@babel/core > @babel/types > lodash':
+        patched: '2019-07-04T01:30:39.614Z'
+    - gulp-sass > node-sass > lodash:
+        patched: '2019-07-04T01:30:39.614Z'
+    - '@babel/preset-env > @babel/plugin-transform-dotall-regex > @babel/helper-regex > lodash':
+        patched: '2019-07-04T01:30:39.614Z'
+    - gulp-sass > node-sass > sass-graph > lodash:
+        patched: '2019-07-04T01:30:39.614Z'
+    - '@babel/core > lodash':
+        patched: '2019-07-04T01:30:39.614Z'
+    - uncss > jsdom > request-promise-native > request-promise-core > lodash:
+        patched: '2019-07-04T01:30:39.614Z'
+    - gulp-sass > node-sass > gaze > globule > lodash:
+        patched: '2019-07-04T01:30:39.614Z'
+    - '@babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/types > lodash':
+        patched: '2019-07-04T01:30:39.614Z'
+    - '@babel/preset-env > @babel/plugin-transform-parameters > @babel/helper-call-delegate > @babel/traverse > @babel/generator > @babel/types > lodash':
+        patched: '2019-07-04T01:30:39.614Z'
+    - '@babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/traverse > @babel/helper-function-name > @babel/types > lodash':
+        patched: '2019-07-04T01:30:39.614Z'
+    - '@babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash':
+        patched: '2019-07-04T01:30:39.614Z'
