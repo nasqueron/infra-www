@@ -230,7 +230,7 @@ var ServersLog = function (url, container) {
         ],
 
         /**
-         * Whitelist of known hexadecimal words.
+         * Known hexadecimal words. Those won't be substituted as Git commits hashes.
          *
          * @var array
          */
@@ -249,7 +249,7 @@ var ServersLog = function (url, container) {
         ],
 
         /**
-         * Determines if an expression matches a whitelisted hexadecimal word.
+         * Determines if an expression matches a known hexadecimal word.
          *
          * @param word The word to check
          * @returns {boolean}
