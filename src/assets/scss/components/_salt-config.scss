@@ -1,0 +1,139 @@
+/*  -------------------------------------------------------------
+General elements
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
+
+.extra-action {
+  float: right;
+}
+
+/*  -------------------------------------------------------------
+Servers list
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
+
+.servers {
+  li {
+    list-style-type: none;
+    padding: 1em;
+    border: solid 2px $primary-color;
+    width: 16em;
+    float: left;
+    margin-right: 1em;
+    margin-bottom: 1em;
+
+    .server-property {
+      display: block;
+    }
+
+    .server-name {
+      color: $secondary-color;
+      font-weight: bold;
+    }
+  }
+
+  li:hover {
+    background-color: lighten($body-background, 10%);
+
+    //background-color: #474747;
+    cursor: zoom-in;
+  }
+}
+
+/*  -------------------------------------------------------------
+Salt configuration
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
+
+$config-margin: 1em;
+$icon-width: 3.5rem;
+$config-block-margin-height: 2.5em;
+
+.config-server::before {
+  content: "🖥️ ";
+  display: inline-block;
+  width: $icon-width;
+}
+
+.config-summary-roles {
+  margin-bottom: $config-block-margin-height;
+}
+
+.config-summary-roles-heading::before {
+  content: "📖 ";
+  display: inline-block;
+  width: $icon-width;
+}
+
+.config-role {
+  margin-bottom: $config-block-margin-height;
+  line-height: 1.5em;
+
+  .config-role-title::before {
+    content: "📦 ";
+    display: inline-block;
+    width: $icon-width;
+  }
+
+  .config-role-content {
+
+    a {
+      color: #b5c9c7;
+    }
+
+    a:hover {
+      color: white;
+    }
+
+    .state {
+      margin-bottom: 1.25em;
+
+      .state-name {
+        color: #c4e3e9;
+        font-weight: bold;
+      }
+
+      .state-module {
+        margin-left: $config-margin;
+      }
+
+      .state-properties {
+        margin-left: 2 * $config-margin;
+
+        .state-property {
+          .key {
+            color: #d2eaee;
+          }
+
+          .key::after {
+            content: ": "
+          }
+
+          .value .state-property {
+            padding-left: $config-margin;
+          }
+        }
+
+        ul.state-list {
+          margin-bottom: 0;
+        }
+
+        .state-list-item {
+          margin-left: $config-margin / 2;
+
+          .state-property {
+            padding-left: 0 !important;
+          }
+        }
+      }
+    }
+
+  }
+
+  .config-error {
+    color: $warning-color;
+    font-weight: bold;
+  }
+
+  .config-error::before {
+    content: "🔥 ";
+  }
+
+}

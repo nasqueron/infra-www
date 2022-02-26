@@ -35,3 +35,4 @@ PATHS:
     - "src/assets/js/app.js"
     - "src/assets/js/docker-registry.js"
     - "src/assets/js/servers-log.js"
+    - "src/assets/js/salt-config.js"
