@@ -213,6 +213,10 @@ ${this.formatStates(states)}`
             // roles/core/rc/files/periodic.conf
 
             dump: function (data) {
+                if (data === null) {
+                    return `<span class="null">NULL</span>`
+                }
+
                 if (typeof data === "string" && data.startsWith("salt://")) {
                     return this.resolveSaltLink(data)
                 }

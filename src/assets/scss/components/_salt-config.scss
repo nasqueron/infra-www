@@ -127,9 +127,13 @@ $config-block-margin-height: 2.5em;
 
   }
 
-  .config-error {
+  .config-error, .null {
     color: $warning-color;
     font-weight: bold;
+  }
+
+  .null::before {
+    content: "∅ ";
   }
 
   .config-error::before {
