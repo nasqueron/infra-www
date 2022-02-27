@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Doc') {
             steps {
-                git 'https://devcentral.nasqueron.org/source/infra-www.git'
+                git url: 'https://devcentral.nasqueron.org/source/infra-www.git', branch: 'main'
 
                 sh '''
                 npm install
