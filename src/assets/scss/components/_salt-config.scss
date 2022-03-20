@@ -131,7 +131,7 @@ $config-block-margin-height: 2.5em;
     font-weight: bold;
   }
 
-  .config-error, .null {
+  .config-error, .null, .credential {
     color: $warning-color;
   }
 
@@ -141,6 +141,22 @@ $config-block-margin-height: 2.5em;
 
   .null::before {
     content: "∅ ";
+  }
+
+  .credential::before {
+    content: "🔑 ";
+  }
+
+  .random::before {
+    content: "🎲 ";
+  }
+
+  .credential::before {
+    content: "🔑 ";
+  }
+
+  .random.credential::before {
+    content: "🎲🔑 ";
   }
 
   .config-error::before {

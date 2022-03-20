@@ -221,6 +221,14 @@ ${this.formatStates(states)}`
                     return this.resolveSaltLink(data)
                 }
 
+                if (typeof data === "string" && data.startsWith("credential for ")) {
+                    return `<span class="scalar credential">${data}</span>`
+                }
+
+                if (typeof data === "string" && data.startsWith("random credential")) {
+                    return `<span class="scalar credential random">${data}</span>`
+                }
+
                 if (this.isScalar(data)) {
                     return `<span class="scalar">${data}</span>`
                 }
