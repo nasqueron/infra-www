@@ -222,7 +222,7 @@ ${this.formatStates(states)}`
                 }
 
                 if (this.isScalar(data)) {
-                    return data
+                    return `<span class="scalar">${data}</span>`
                 }
                 if (typeof data === "object") {
                     if (data.constructor.name === "Array") {
