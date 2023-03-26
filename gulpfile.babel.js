@@ -14,7 +14,7 @@ import named         from 'vinyl-named';
 import uncss         from 'uncss';
 import autoprefixer  from 'autoprefixer';
 
-var sass = require('gulp-sass')(require('node-sass'));
+var sass = require('gulp-sass')(require('sass'));
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
