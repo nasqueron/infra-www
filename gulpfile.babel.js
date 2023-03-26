@@ -13,6 +13,7 @@ import webpack2      from 'webpack';
 import named         from 'vinyl-named';
 import uncss         from 'uncss';
 import autoprefixer  from 'autoprefixer';
+import imagemin      from 'gulp-imagemin';
 
 var sass = require('gulp-sass')(require('sass'));
 
@@ -26,8 +27,10 @@ const PRODUCTION = !!(yargs.argv.production);
 const { PORT, UNCSS_OPTIONS, PATHS, TUNNEL } = loadConfig();
 
 function loadConfig() {
+    const unsafe = require('js-yaml-js-types').all;
+    const schema = yaml.DEFAULT_SCHEMA.extend(unsafe);
     let ymlFile = fs.readFileSync('config.yml', 'utf8');
-    return yaml.load(ymlFile);
+    return yaml.load(ymlFile, {schema});
 }
 
 // Build the "dist" folder by running all of the below tasks
@@ -133,8 +136,16 @@ function javascript() {
 // In production, the images are compressed
 function images() {
     return gulp.src('src/assets/img/**/*')
-        .pipe($.if(PRODUCTION, $.imagemin([
-            $.imagemin.jpegtran({ progressive: true }),
+        .pipe($.if(PRODUCTION, imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.mozjpeg({quality: 85, progressive: true}),
+            imagemin.optipng({optimizationLevel: 5}),
+            imagemin.svgo({
+                plugins: [
+                    {removeViewBox: true},
+                    {cleanupIDs: false}
+                ]
+            })
         ])))
         .pipe(gulp.dest(PATHS.dist + '/assets/img'));
 }
