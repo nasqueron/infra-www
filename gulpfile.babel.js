@@ -23,7 +23,7 @@ const $ = plugins();
 const PRODUCTION = !!(yargs.argv.production);
 
 // Load settings from settings.yml
-const { PORT, UNCSS_OPTIONS, PATHS } = loadConfig();
+const { PORT, UNCSS_OPTIONS, PATHS, TUNNEL } = loadConfig();
 
 function loadConfig() {
     let ymlFile = fs.readFileSync('config.yml', 'utf8');
@@ -142,7 +142,10 @@ function images() {
 // Start a server with BrowserSync to preview the site in
 function server(done) {
     browser.init({
-        server: PATHS.dist, port: PORT
+        server: PATHS.dist,
+        port: PORT,
+
+        tunnel: TUNNEL,
     }, done);
 }
 
