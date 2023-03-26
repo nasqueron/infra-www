@@ -23,7 +23,7 @@ const $ = plugins();
 const PRODUCTION = !!(yargs.argv.production);
 
 // Load settings from settings.yml
-const { COMPATIBILITY, PORT, UNCSS_OPTIONS, PATHS } = loadConfig();
+const { PORT, UNCSS_OPTIONS, PATHS } = loadConfig();
 
 function loadConfig() {
     let ymlFile = fs.readFileSync('config.yml', 'utf8');
@@ -77,7 +77,7 @@ function compileSass() {
 
     const postCssPlugins = [
         // Autoprefixer
-        autoprefixer({ browsers: COMPATIBILITY }),
+        autoprefixer(),
 
         // UnCSS - Uncomment to remove unused styles in production
         // PRODUCTION && uncss.postcssPlugin(UNCSS_OPTIONS),
@@ -90,7 +90,7 @@ function compileSass() {
         })
             .on('error', sass.logError))
         .pipe($.postcss(postCssPlugins))
-        .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
+        .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie11' })))
         .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
         .pipe(gulp.dest(PATHS.dist + '/assets/css'))
         .pipe(browser.reload({ stream: true }));
