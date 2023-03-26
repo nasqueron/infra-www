@@ -116,7 +116,7 @@ $config-block-margin-height: 2.5em;
         }
 
         .state-list-item {
-          margin-left: $config-margin / 2;
+          margin-left: calc($config-margin / 2);
 
           .state-property {
             padding-left: 0 !important;
